@@ -138,6 +138,8 @@ while count > 0:
 		text = struct.unpack("<%ds" % slen, data[offset: offset + slen])[0]
 		offset += slen
 		print(text)
+		newf = open("ascii.txt", "w")
+		newf.write(text)
 
 	count -= 1	
 
